@@ -23,3 +23,40 @@ const navBar = <nav>I am a nav bar</nav>;
 const title = <h1 id="title">Introduction to React.js: Part I</h1>;
 
 const panda = <img src="images/panda.jpg" alt="panda" width="500px" height="500px" />;
+
+// You can nest JSX elements inside of other JSX elements, just like in HTML.
+<a href="https://www.example.com"><h1>Click me!</h1></a>
+
+<a href="https://www.example.com">
+  <h1>
+    Click me!
+  </h1>
+</a>
+
+const myDiv = (
+  <div><h1>Hello world</h1></div>
+  );
+
+// Nested JSX expressions can be saved as variables, passed to functions, etc., just like non-nested JSX expressions can!
+const theExample = (
+  <a href="https://www.example.com">
+    <h1>
+      Click me!
+    </h1>
+  </a>
+);
+
+// NOTE There's a rule that we haven't mentioned: a JSX expression must have exactly one outermost element.
+// In other words, this code will work:
+const paragraphs = (
+  <div id="i-am-the-outermost-element">
+    <p>I am a paragraph.</p>
+    <p>I, too, am a paragraph.</p>
+  </div>
+);
+
+// But this code will not work:
+const paragraphs = (
+  <p>I am a paragraph.</p>
+  <p>I, too, am a paragraph.</p>
+);
