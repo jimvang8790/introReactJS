@@ -1,0 +1,26 @@
+{
+  "name": "introreactjs",
+  "version": "1.0.0",
+  "description": "Intro to ReactJS ================",
+  "main": "app.compiled.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimvang8790/introReactJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimvang8790/introReactJS/issues"
+  },
+  "homepage": "https://github.com/jimvang8790/introReactJS#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
