@@ -60,3 +60,33 @@ const paragraphs = (
   <p>I am a paragraph.</p>
   <p>I, too, am a paragraph.</p>
 );
+
+// React applications are made out of components. A component is a small, reusable chunk of code that is responsible for one job. That job is often to render some HTML.
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class MyComponentClass extends React.Component {
+  render() {
+    return <h1>Hello world</h1>;
+  }
+};
+
+ReactDOM.render(
+  <MyComponentClass />,
+  document.getElementById('app')
+);
+
+// A render() function must have a return statement.
+// A render() function can also be a fine place to put simple calculations that need to happen right before a component renders.
+class Random extends React.Component {
+  render() {
+
+    // First, some logic that must happen
+    // before rendering:
+    const n = Math.floor(Math.random()*10+1);
+
+    // Next, a return statement
+    // using that logic:
+    return <h1>The number is {n}!</h1>;
+  }
+}
