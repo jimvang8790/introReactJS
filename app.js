@@ -112,3 +112,32 @@ ReactDOM.render(
 	<TodaysPlan />,
 	document.getElementById('app')
 );
+
+// The word this gets used in React a lot! You are especially likely to see this inside of the body of a component class declaration
+class IceCreamGuy extends React.Component {
+  get food() {
+    return 'ice cream';
+  }
+
+  render() {
+    return <h1>I like {this.food}.</h1>;
+  }
+}
+// The simple answer is that this refers to an instance of IceCreamGuy. The less simple answer is that this refers to the object on which this's enclosing method, in this case .render(), is called.
+
+// another exmaple
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class MyName extends React.Component {
+	// name property goes here:
+get name() {
+  return 'whatever-your-name-is-goes-here';
+}
+
+  render() {
+    return <h1>My name is {this.name}.</h1>;
+  }
+}
+
+ReactDOM.render(<MyName />, document.getElementById('app'));
