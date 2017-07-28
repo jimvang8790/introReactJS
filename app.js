@@ -194,8 +194,9 @@ render() {
 
   return <h1>Hello world</h1>;
 }
- // another example
- import React from 'react';
+
+// another example
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 class PropsDisplayer extends React.Component {
@@ -243,3 +244,32 @@ class PropsDisplayer extends React.Component {
 ReactDOM.render(
 <PropsDisplayer myProp="Hello" />
 document.getElementById('app'));
+
+// NOTE learned how to pass a prop to a component
+// props is the name of the object that stores passed-in information
+// this.props refers to that storage object
+// At the same time, each piece of passed-in information is called a prop. This means that props could refer to two pieces of passed-in information, or it could refer to the object that stores those pieces of information
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Greeting } from './Greeting';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>
+          Hullo and, "Welcome to The Newzz," "On Line!"
+        </h1>
+        <Greeting name="Ruby" />
+        <article>
+          Latest newzz:  where is my phone?
+        </article>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
