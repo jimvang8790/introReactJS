@@ -215,3 +215,31 @@ class PropsDisplayer extends React.Component {
 ReactDOM.render(
 <PropsDisplayer />
 document.getElementById('app'));
+
+// NOTE message pass information to a component. You can use any name you want.
+<Example message="This is some top secret info." />
+
+// If you want to pass information that isn't a string, then wrap that information in curly braces. Here's how you would pass an array:
+<Greeting name="Frarthur" town="Flundon" age={2} haunted={false} />
+
+// another example
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class PropsDisplayer extends React.Component {
+  render() {
+  	const stringProps = JSON.stringify(this.props);
+
+    return (
+      <div>
+        <h1>CHECK OUT MY PROPS OBJECT</h1>
+        <h2>{stringProps}</h2>
+      </div>
+    );
+  }
+}
+
+// ReactDOM.render goes here:
+ReactDOM.render(
+<PropsDisplayer myProp="Hello" />
+document.getElementById('app'));
