@@ -181,3 +181,37 @@ ReactDOM.render(
 <Button />
 document.getElementById('app')
 );
+
+// Every component has something called props.
+// A component's props is an object. It holds information about that component.
+// To see a component's props object, you use the expression this.props
+render() {
+  console.log("Props object comin' up!");
+
+  console.log(this.props);
+
+  console.log("That was my props object!");
+
+  return <h1>Hello world</h1>;
+}
+ // another example
+ import React from 'react';
+import ReactDOM from 'react-dom';
+
+class PropsDisplayer extends React.Component {
+  render() {
+  	const stringProps = JSON.stringify(this.props);
+
+    return (
+      <div>
+        <h1>CHECK OUT MY PROPS OBJECT</h1>
+        <h2>{stringProps}</h2>
+      </div>
+    );
+  }
+}
+
+// ReactDOM.render goes here:
+ReactDOM.render(
+<PropsDisplayer />
+document.getElementById('app'));
