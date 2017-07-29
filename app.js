@@ -273,3 +273,88 @@ ReactDOM.render(
   <App />,
   document.getElementById('app')
 );
+
+// NOTE To make a component have state, give the component a state property. This property should be declared inside of a constructor method, like this:
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { mood: 'decent' };
+  }
+
+  render() {
+    return <div></div>;
+  }
+}
+
+<Example />
+
+// another example
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class App extends React.Component {
+	// constructor method begins here:
+constructor(props) {
+  super(props);
+  this.state = { title: 'Best App' };
+}
+
+  render() {
+    return (
+      <h1>
+        Wow this entire app is just an h1.
+      </h1>
+    );
+  }
+}
+
+// A component can do more than just read its own state. A component can also change its own state.
+//  A component changes its state by calling the function this.setState()
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { weather: 'sunny' };
+    this.makeSomeFog = this.makeSomeFog.bind(this);
+  }
+
+  makeSomeFog() {
+    this.setState({
+      weather: 'foggy'
+    });
+  }
+}
+
+// another one
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const green = '#39D1B4';
+const yellow = '#FFD712';
+
+class Toggle extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = { color: green };
+    this.changeColor = this.changeColor.bind(this);
+  }
+
+  changeColor() {
+    const newColor = this.state.color == green ? yellow : green;
+    this.setState({ color: newColor });
+  }
+
+  render() {
+    return (
+      <div style={{background: this.state.color}}>
+        <h1>
+          Change my color
+        </h1>
+        <button onClick={this.changeColor}>
+  				Change color
+				</button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Toggle />, document.getElementById('app'));
