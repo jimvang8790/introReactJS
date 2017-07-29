@@ -12,6 +12,11 @@ Here are just a few of the reasons why people choose to program with React:
 - People are still figuring out React's potential. There's room to explore.
 - React is popular. While this reason has admittedly little to do with React's quality, the truth is that understanding
 
+Why learn ReactJS?
+------------------
+
+ReactJS presents graceful solutions to some of front-end programming's most persistent issues. It's fast, scalable, flexible, powerful, and has a robust developer community that's rapidly growing. There's never been a better time to learn React.
+
 props
 -----
 props is quite possibly the longest and most difficult lesson in all of our React courses. Congratulations on getting this far!
